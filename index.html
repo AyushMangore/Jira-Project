@@ -1,3 +1,12 @@
+<!-- 
+    Author -> Ayush Mangore
+    In this project I have tried to imitate the jira ticket manager
+    web application. Here user can create several tickets, user can write some kind
+    of text in it and prioritize their tickets with the help of colors, multiple tickets
+    can be added as well as deleted and also there are option to categorize the priority by 
+    single click on the specific color or by double clicking on any color to view all the tickets
+ -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,14 +24,23 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <!-- 
+        First html element is our header 
+     -->
     <!-- Tool Box -->
     <div class="toolbox-cont">
+        <!-- 
+            This is the color tab where user have four color options to choose from
+         -->
         <div class="toolbox-priority-cont">
             <div class="lightpink color"></div>
             <div class="lightblue color"></div>
             <div class="lightgreen color"></div>
             <div class="black color"></div>
         </div>
+        <!-- 
+            This container contains two action elements to add or remove 
+         -->
         <div class="action-button-cont">
             <div class="add-btn">
                 <i class="fas fa-plus"></i>
@@ -33,7 +51,10 @@
         </div>
     </div>
     <!-- Main Container -->
+    <!-- This container will contain all the tickets -->
     <div class="main-cont">
+        <!-- The commented code is the model on which our ticket
+        container will be designed and manipulated through DOM -->
         <!-- <div class="ticket-cont">
             <div class="ticket-color lightpink"></div>
             <div class="ticket-id">ticket id</div>
@@ -41,8 +62,12 @@
             <div class="ticket-lock"><i class="fas fa-lock"></i></div>
         </div> -->
     </div>
+    <!-- This is the container where we can write our text and prioritize the colors
+    and finally add out tickets -->
     <div class="modal-cont">
+        <!-- It has a text area to write text -->
         <textarea spellcheck="false" class="textarea-cont" placeholder="Enter Your Task"></textarea>
+        <!-- It has colors options for defining priority -->
         <div class="priority-colors-cont">
             <div class="lightpink priority-color"></div>
             <div class="lightblue priority-color"></div>
@@ -50,6 +75,7 @@
             <div class="black priority-color border"></div>
         </div>
     </div>
+    <!-- Node api added to create random unique id -->
     <script src="https://unpkg.com/shortid-dist@1.0.5/dist/shortid-2.2.13.min.js"></script>
     <script src="./script.js"></script>
 </body>
